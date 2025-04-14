@@ -73,13 +73,13 @@ resource "aws_security_group" "jump_sg" {
   }
 
   tags = {
-    Name = "JumpServerSG_jair_3"
+    Name = "JumpServerSG_torres_3"
   }
 }
 
 # --- Grupo de Seguridad: Web Servers ---
 resource "aws_security_group" "web_sg" {
-  name        = "WebServerSG_jair_3"
+  name        = "WebServerSG_torres_3"
   description = "HTTP desde Internet, SSH solo desde Jump Server"
   vpc_id      = aws_vpc.vpc.id
 
@@ -142,7 +142,7 @@ resource "aws_instance" "web_server" {
               EOF
 
   tags = {
-    Name = "WebServerjair_3-${count.index + 1}"
+    Name = "WebServertorres_3-${count.index + 1}"
   }
 }
 
