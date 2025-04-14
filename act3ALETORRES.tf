@@ -8,7 +8,7 @@ resource "aws_vpc" "vpc" {
   cidr_block = "10.10.0.0/20"
 
   tags = {
-    Name = "act_jair_3"
+    Name = "act_TORRES_3"
   }
 }
 
@@ -19,7 +19,7 @@ resource "aws_subnet" "subnet_public" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "act_jair_3subnet_public"
+    Name = "act_3_TORRES_subnet_public"
   }
 }
 
@@ -54,7 +54,7 @@ resource "aws_route_table_association" "public" {
 
 # --- Grupo de Seguridad: Jump Server ---
 resource "aws_security_group" "jump_sg" {
-  name        = "JumpServerSG_jair_3"
+  name        = "JumpServerSG_TORRES_3"
   description = "Permite SSH desde Internet"
   vpc_id      = aws_vpc.vpc.id
 
@@ -105,7 +105,7 @@ resource "aws_security_group" "web_sg" {
   }
 
   tags = {
-    Name = "WebServerSG_jair_3"
+    Name = "WebServerSG_TORRES_3"
   }
 }
 
@@ -119,7 +119,7 @@ resource "aws_instance" "jump_server" {
   key_name               = "vockey"
 
   tags = {
-    Name = "JumpServerjair_3"
+    Name = "JumpServerjTORRES_3"
   }
 }
 
