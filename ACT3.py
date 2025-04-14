@@ -55,7 +55,7 @@ def crear_pagina():
 
     <body>
 
-        <h1>¡Hola, bienvenido a el script de jair!</h1>
+        <h1>¡Hola, bienvenido a el script de alejandro torres!</h1>
 
     </body>
 
